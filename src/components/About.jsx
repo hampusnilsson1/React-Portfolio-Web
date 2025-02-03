@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "motion/react";
+
 import hampusimg from "../assets/hampusimg.jpg";
 
 function About() {
@@ -16,13 +18,18 @@ function About() {
             gym, lifting weights and challenging myself to improve every day.
           </p>
         </div>
-        <div className="w-[460px] h-[460px] flex justify-center items-center">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-[460px] h-[460px] flex justify-center items-center"
+        >
           <img
             src={hampusimg}
             alt="Profile Picture"
             className="rounded-full shadow-2xl my-auto"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

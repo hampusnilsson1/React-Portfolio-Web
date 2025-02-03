@@ -1,8 +1,9 @@
 import React from "react";
+import { motion } from "motion/react";
 
 function NavBar() {
   const navItemClasses =
-    "ml-12 text-nowrap cursor-pointer hover:text-cyan-200 transition duration-150 ease-in-out";
+    "ml-12 text-nowrap cursor-pointer hover:text-cyan-300 transition duration-150 ease-in-out";
   const buttonClasses =
     "h-14 px-8 text-black text-nowrap bg-green-300 rounded-3xl ml-12 hover:bg-emerald-300 transition duration-150 ease-in-out";
 
@@ -14,10 +15,34 @@ function NavBar() {
           <p className="cursor-default text-xl font-semibold ml-6">Nilsson</p>
         </div>
         <div className="flex items-center">
-          <p className={navItemClasses}>Home</p>
-          <p className={navItemClasses}>About</p>
-          <p className={navItemClasses}>Projects</p>
-          <p className={navItemClasses}>Contact Me</p>
+          <motion.p
+            whileHover={{ scale: 1.15 }}
+            transition={{ duration: 0.1 }}
+            className={navItemClasses}
+          >
+            Home
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.15 }}
+            transition={{ duration: 0.1 }}
+            className={navItemClasses}
+          >
+            About
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.15 }}
+            transition={{ duration: 0.1 }}
+            className={navItemClasses}
+          >
+            Projects
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.15 }}
+            transition={{ duration: 0.1 }}
+            className={navItemClasses}
+          >
+            Contact Me
+          </motion.p>
           <button className={buttonClasses}>Hire me!</button>
         </div>
       </nav>
